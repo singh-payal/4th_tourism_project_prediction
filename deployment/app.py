@@ -217,8 +217,8 @@ if st.button("🔮 Predict Purchase Likelihood", use_container_width=True):
                 st.markdown(
                     f'<div class="prediction-box success-box">'
                     f'<h2 style="color: #155724;">✅ High Likelihood of Purchase!</h2>'
-                    f'<p style="font-size: 18px;">This customer is <b>likely to purchase</b> the Wellness Tourism Package.</p>'
-                    f'<p style="font-size: 16px;">Confidence: <b>{prediction_proba[1]*100:.2f}%</b></p>'
+                    f'<p style="font-size: 18px; color: #155724;">This customer is <b>likely to purchase</b> the Wellness Tourism Package.</p>'
+                    f'<p style="font-size: 16px; color: #155724;">Confidence: <b>{prediction_proba[1]*100:.2f}%</b></p>'
                     f'</div>',
                     unsafe_allow_html=True
                 )
@@ -227,8 +227,8 @@ if st.button("🔮 Predict Purchase Likelihood", use_container_width=True):
                 st.markdown(
                     f'<div class="prediction-box warning-box">'
                     f'<h2 style="color: #856404;">⚠️ Low Likelihood of Purchase</h2>'
-                    f'<p style="font-size: 18px;">This customer is <b>unlikely to purchase</b> the Wellness Tourism Package.</p>'
-                    f'<p style="font-size: 16px;">Confidence: <b>{prediction_proba[0]*100:.2f}%</b></p>'
+                    f'<p style="font-size: 18px; color: #856404;">This customer is <b>unlikely to purchase</b> the Wellness Tourism Package.</p>'
+                    f'<p style="font-size: 16px; color: #856404;">Confidence: <b>{prediction_proba[0]*100:.2f}%</b></p>'
                     f'</div>',
                     unsafe_allow_html=True
                 )
