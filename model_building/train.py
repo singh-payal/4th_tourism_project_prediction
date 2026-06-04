@@ -93,8 +93,7 @@ with mlflow.start_run():
 
     # Log parameter sets
     results = grid_search.cv_results_
-    print(f"
-Evaluated {len(results['params'])} parameter combinations")
+    print(f"Evaluated {len(results['params'])} parameter combinations")
 
     for i in range(len(results['params'])):
         param_set = results['params'][i]
@@ -105,8 +104,7 @@ Evaluated {len(results['params'])} parameter combinations")
             mlflow.log_metric("mean_roc_auc", mean_score)
 
     # Best model
-    print(f"
-Best parameters: {grid_search.best_params_}")
+    print(f"Best parameters: {grid_search.best_params_}")
     mlflow.log_params(grid_search.best_params_)
     best_model = grid_search.best_estimator_
 
