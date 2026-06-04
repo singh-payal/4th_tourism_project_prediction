@@ -20,15 +20,17 @@ from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 import mlflow
 
 # Set up MLflow tracking (using file-based URI for GitHub Actions)
+# Set up MLflow tracking
 mlflow.set_tracking_uri("http://localhost:5000")
 mlflow.set_experiment("4th-tourism-package-prediction")
 
+api = HfApi()
+
 # Load the preprocessed data from Hugging Face
-print("Loading preprocessed data...")
-Xtrain = pd.read_csv(hf_hub_download(repo, "Xtrain.csv", repo_type="dataset"))
-Xtest  = pd.read_csv(hf_hub_download(repo, "Xtest.csv", repo_type="dataset"))
-ytrain = pd.read_csv(hf_hub_download(repo, "ytrain.csv", repo_type="dataset")).squeeze()
-ytest  = pd.read_csv(hf_hub_download(repo, "ytest.csv", repo_type="dataset")).squeeze()
+Xtrain_path = "hf://datasets/singhpayal/tourism-dataset/Xtrain.csv"
+Xtest_path = "hf://datasets/singhpayal/tourism-dataset/Xtest.csv"
+ytrain_path = "hf://datasets/singhpayal/tourism-dataset/ytrain.csv"
+ytest_path = "hf://datasets/singhpayal/tourism-dataset/ytest.csv"
 
 
 
