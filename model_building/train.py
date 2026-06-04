@@ -111,8 +111,7 @@ Best parameters: {grid_search.best_params_}")
     best_model = grid_search.best_estimator_
 
     # Predictions
-    print("
-Making predictions...")
+    print("Making predictions...")
     y_pred_train = best_model.predict(Xtrain)
     y_pred_test = best_model.predict(Xtest)
 
@@ -121,8 +120,7 @@ Making predictions...")
     y_pred_test_proba = best_model.predict_proba(Xtest)[:, 1]
 
     # Calculate metrics
-    print("
-Calculating metrics...")
+    print("Calculating metrics...")
     train_accuracy = accuracy_score(ytrain, y_pred_train)
     test_accuracy = accuracy_score(ytest, y_pred_test)
 
@@ -153,8 +151,7 @@ Calculating metrics...")
     })
 
     # Print results
-    print("
-" + "="*50)
+    print("" + "="*50)
     print("MODEL PERFORMANCE METRICS")
     print("="*50)
     print(f"Train Accuracy: {train_accuracy:.4f} | Test Accuracy: {test_accuracy:.4f}")
@@ -164,12 +161,10 @@ Calculating metrics...")
     print(f"Train ROC-AUC: {train_roc_auc:.4f} | Test ROC-AUC: {test_roc_auc:.4f}")
     print("="*50)
 
-    print("
-Test Set Classification Report:")
+    print("Test Set Classification Report:")
     print(classification_report(ytest, y_pred_test, target_names=['No Purchase', 'Purchase']))
 
-    print("
-Test Set Confusion Matrix:")
+    print("Test Set Confusion Matrix:")
     print(confusion_matrix(ytest, y_pred_test))
 
     # Save the model locally
