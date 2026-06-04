@@ -199,7 +199,6 @@ Repository '{repo_id}' not found. Creating new repository...")
     )
     print(f"Model uploaded to Hugging Face: {repo_id}")
 
-print("
-" + "="*50)
+print("" + "="*50)
 print("MODEL TRAINING COMPLETED SUCCESSFULLY!")
 print("="*50)
