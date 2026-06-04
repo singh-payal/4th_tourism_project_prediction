@@ -168,8 +168,7 @@ with mlflow.start_run():
     # Save the model locally
     model_path = "best_tourism_model_v1.joblib"
     joblib.dump(best_model, model_path)
-    print(f"
-Model saved locally as: {model_path}")
+    print(f"Model saved locally as: {model_path}")
 
     # Log the model artifact
     mlflow.log_artifact(model_path, artifact_path="model")
@@ -182,11 +181,9 @@ Model saved locally as: {model_path}")
     # Step 1: Check if the repository exists
     try:
         api.repo_info(repo_id=repo_id, repo_type=repo_type)
-        print(f"
-Repository '{repo_id}' already exists. Using it.")
+        print(f"Repository '{repo_id}' already exists. Using it.")
     except RepositoryNotFoundError:
-        print(f"
-Repository '{repo_id}' not found. Creating new repository...")
+        print(f"Repository '{repo_id}' not found. Creating new repository...")
         create_repo(repo_id=repo_id, repo_type=repo_type, private=False)
         print(f"Repository '{repo_id}' created.")
 
