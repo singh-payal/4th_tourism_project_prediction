@@ -20,7 +20,8 @@ from huggingface_hub.utils import RepositoryNotFoundError, HfHubHTTPError
 import mlflow
 
 # Set up MLflow tracking (using file-based URI for GitHub Actions)
-mlflow.set_tracking_uri("file:///mlruns")
+mlruns_path = os.path.abspath("mlruns")
+mlflow.set_tracking_uri(f"file://{mlruns_path}")
 mlflow.set_experiment("4th-tourism-package-prediction")
 api = HfApi(token=os.getenv("HF_TOKEN")) # Initialize with token
 repo = "singhpayal/4th_tourism_project_prediction_dataset"
