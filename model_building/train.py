@@ -21,7 +21,7 @@ import mlflow
 
 # Set up MLflow tracking (using file-based URI for GitHub Actions)
 mlflow.set_tracking_uri("file:///mlruns")
-
+mlflow.set_experiment("4th-tourism-package-prediction")
 api = HfApi(token=os.getenv("HF_TOKEN")) # Initialize with token
 repo = "singhpayal/4th_tourism_project_prediction_dataset"
 
