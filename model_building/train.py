@@ -32,7 +32,11 @@ Xtest_path = "hf://datasets/singhpayal/tourism-dataset/Xtest.csv"
 ytrain_path = "hf://datasets/singhpayal/tourism-dataset/ytrain.csv"
 ytest_path = "hf://datasets/singhpayal/tourism-dataset/ytest.csv"
 
-
+print("Loading preprocessed data...")
+Xtrain = pd.read_csv(Xtrain_path)
+Xtest = pd.read_csv(Xtest_path)
+ytrain = pd.read_csv(ytrain_path).values.ravel()
+ytest = pd.read_csv(ytest_path).values.ravel()
 
 print(f"Training set shape: {Xtrain.shape}")
 print(f"Test set shape: {Xtest.shape}")
